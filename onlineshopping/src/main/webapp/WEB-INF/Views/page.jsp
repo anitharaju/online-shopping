@@ -34,7 +34,7 @@
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<link href="${css}/bootstrap-readabletheme.css" rel="stylesheet">
 
 
 <!-- Bootstrap DataTables -->
