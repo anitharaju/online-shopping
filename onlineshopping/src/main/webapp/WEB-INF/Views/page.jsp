@@ -16,7 +16,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Online Shopping Website Using Spring MVC and Hibernate">
+<meta name="description"
+	content="Online Shopping Website Using Spring MVC and Hibernate">
 <meta name="author" content="Khozema Nullwala">
 <meta name="_csrf" content="${_csrf.token}">
 <meta name="_csrf_header" content="${_csrf.headerName}">
@@ -25,9 +26,8 @@
 
 <script>
 	window.menu = '${title}';
-	
+
 	window.contextRoot = '${contextRoot}'
-	
 </script>
 
 <!-- Bootstrap Core CSS -->
@@ -54,17 +54,17 @@
 </head>
 
 <body>
-	
+
 	<div class="se-pre-con"></div>
 	<div class="wrapper">
 
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
-
+		
 		<!-- Page Content -->
 
 		<div class="content">
-			
+
 			<!-- Loading the home content -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
@@ -79,13 +79,21 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
+			<!-- Load only when user clicks all productd -->
+			<c:if test="${userClickAllProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			<!-- Load only when user clicks all productd -->
+			<c:if test="${userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
 
 		</div>
 
 
-		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
+		<%--  <!-- Footer comes here -->
+		<%@include file="./shared/footer.jsp"%> --%>
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
@@ -94,16 +102,16 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
+
 		<!-- DataTable Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
-		
+
 		<!-- DataTable Bootstrap Script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
-		
+
 		<!-- DataTable Bootstrap Script -->
 		<script src="${js}/bootbox.min.js"></script>
-		
+
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
 

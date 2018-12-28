@@ -1,14 +1,13 @@
 
 
-<h1 class="my-4">Shop Name</h1>
+<h1 class="my-4">Shop Name Arun</h1>
 
 
 <div class="list-group">
-	<c:forEach items="${categories}" var="catagory">
-		<a href="#" class="list-group-item">${category.name}///</a>
+	 <c:forEach items="${categories}" var="category">
+		 <a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item">${category.name}</a>
+		
+	</c:forEach> 
+	 <%-- <a href="${contextroot}/onlineshopping/show/category/1/products" class="list-group-item">TV</a> --%>
 
-	</c:forEach>
-	<!-- <a href="#" class="list-group-item">Cat 1</a>
-	<a href="#" class="list-group-item">Cat 2</a>
-	<a href="#" class="list-group-item">Cat 3</a> -->
-</div>
+</div> 
