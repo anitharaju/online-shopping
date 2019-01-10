@@ -20,10 +20,12 @@ public class CategoryTestCase {
 		context=new AnnotationConfigApplicationContext();
 		context.scan("com.arun.onlineshoppingbackend");
 		context.refresh();
+		System.out.println("refreshed");
 		
 		categoryDAO=(CategoryDAO) context.getBean("categoryDAO");
+		System.out.println("get bean");
 	}
-	@Test
+@Test
 	public void testAddCategory()
 	{
 		 	category=new Category();
@@ -33,4 +35,41 @@ public class CategoryTestCase {
 			assertEquals("Successfuly added the Category details to database table ",true,categoryDAO.add(category));
 			
 	}
+	/*@Test
+	public void testGetCategory()
+	{
+		 	category=categoryDAO.get(3);
+	
+			 
+			assertEquals("Successfuly fetched a single   Category from the  table ","Television",category.getName());
+			
+	}*/
+	/*@Test
+	public void testUpdateCategory()
+	{
+		 	category=categoryDAO.get(3);
+		 	category.setName("TV");
+			
+			assertEquals("Successfuly fetched a single   Category from the  table ","Television",category.getName());
+			
+	}*/
+	//@Test
+	/*public void testUpdateCategory()
+	{
+		 	category=categoryDAO.get(3);
+		 	
+			
+			assertEquals("Successfuly deleted  a single   Category from the  table ",true,categoryDAO.delete(category));
+			
+	}*/
+	/*@Test
+	public void testUpdateCategory()
+	{
+	
+		 	
+			
+			assertEquals("Successfuly fetched the list of  Category from the  table ",3,categoryDAO.list().size());
+			
+	}*/
+	
 }

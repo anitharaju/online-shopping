@@ -26,6 +26,7 @@
 
 <script>
 	window.menu = '${title}';
+	
 
 	window.contextRoot = '${contextRoot}'
 </script>
@@ -35,7 +36,6 @@
 
 <!-- Bootstrap Readable Theme -->
 <link href="${css}/bootstrap-readabletheme.css" rel="stylesheet">
-
 
 <!-- Bootstrap DataTables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
@@ -87,6 +87,10 @@
 			<!-- Load only when user clicks all productd -->
 			<c:if test="${userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
+			</c:if>
+			<!-- Load only when user clicks Views button -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
 			</c:if>
 
 		</div>
