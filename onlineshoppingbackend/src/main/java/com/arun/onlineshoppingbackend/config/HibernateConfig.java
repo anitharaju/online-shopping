@@ -25,6 +25,13 @@ public class HibernateConfig {
 	private final static String DATABASE_USERNAME = "sa";
 	private final static String DATABASE_PASSWORD = "";
 	
+	/*
+	private final static String DATABASE_URL = "jdbc:sap://vadbhh006qj.nwtrial.od.sap.biz:30212";
+	private final static String DATABASE_DRIVER = "com.sap.db.jdbc.Driver";
+	private final static String DATABASE_DIALECT = "org.hibernate.dialect.HANAColumnStoreDialect";
+	private final static String DATABASE_USERNAME = "system";
+	private final static String DATABASE_PASSWORD = "Incture123456789101112";*/
+	
 	// dataSource bean will be available
 	@Bean("dataSource")
 	public DataSource getDataSource() {
@@ -41,6 +48,7 @@ public class HibernateConfig {
 		return dataSource;
 		
 	}
+	
 	
 	// sessionFactory bean will be available
 	
@@ -67,8 +75,9 @@ public class HibernateConfig {
 		properties.put("hibernate.dialect", DATABASE_DIALECT);		
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		
-		//properties.put("hibernate.hbm2ddl.auto", "create");
+		//properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		
 		return properties;

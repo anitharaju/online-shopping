@@ -74,7 +74,7 @@
 
 							</tr>
 						</thead>
-						<tfoot>
+						 <tfoot>
 							<tr>
 								<th></th>
 								<th>Name</th>
@@ -85,7 +85,7 @@
 
 
 							</tr>
-						</tfoot>
+						</tfoot> 
 					</table>
 				</div>
 

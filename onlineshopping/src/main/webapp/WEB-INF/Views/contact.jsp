@@ -3,6 +3,7 @@
 	<div class="row">
 		<div>
 			<h1>Contact Us</h1>
+			<h3>Any Queries please contact : 9611813884</h3>
 			<br> <br> <br>
 			<div>
 				<div>

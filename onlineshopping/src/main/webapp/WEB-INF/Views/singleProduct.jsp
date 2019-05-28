@@ -65,7 +65,7 @@
 			</c:choose>
 			
 			
-			<%-- <security:authorize access="isAnonymous() or hasAuthority('USER')">	
+			 <security:authorize access="isAnonymous() or hasAuthority('USER')">	
 
 			<c:choose>
 				
@@ -90,9 +90,9 @@
 			
 			
 			<security:authorize access="hasAuthority('ADMIN')">
-				<a href="${contextRoot}/manage/${product.id}/product" class="btn btn-success">
+				<a href="${contextRoot}/manages/${product.id}/product" class="btn btn-success">
 				<span class="glyphicon glyphicon-pencil"></span> Edit</a>
-			</security:authorize> --%>	
+			</security:authorize> 	
 						
 			
 
